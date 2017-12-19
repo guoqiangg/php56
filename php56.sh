@@ -786,7 +786,7 @@ echo "Total OneinStack Install Time: ${CQUESTION}${installTime}${CEND} minutes"
 [ "${Web_yn}" == 'y' ] && echo -e "\n$(printf "%-32s" "Index URL:")${CMSG}http://${IPADDR}/${CEND}"
 while :; do echo
   echo "${CMSG}Please restart the server and see if the services start up fine.${CEND}"
-  read -p "Do you want to restart OS ? [y/n]: " restart_yn
+  restart_yn='n'
   if [[ ! "${restart_yn}" =~ ^[y,n]$ ]]; then
     echo "${CWARNING}input error! Please only input 'y' or 'n'${CEND}"
   else
